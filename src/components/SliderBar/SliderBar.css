@@ -1,0 +1,107 @@
+/* Barra lateral moderna y colapsable */
+.sidebar {
+    background: rgba(13, 18, 30, 0.95) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 12px;
+    gap: 10px;
+    width: 80px;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+    z-index: 20;
+    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.expanded {
+    width: 240px;
+    align-items: stretch;
+}
+
+/* Cabecera del sidebar (Logo) */
+.sb-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.sb-logo {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #ff6600, #ff007f);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.sb-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Botones e íconos de navegación */
+.sb-ico {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: transparent;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    position: relative;
+}
+
+.sb-ico:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Estado Activo de la pestaña seleccionada */
+.sb-ico.active {
+    background: rgba(255, 102, 0, 0.15) !important;
+    border: 1px solid rgba(255, 102, 0, 0.35) !important;
+    color: #ff8533 !important;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.15);
+}
+
+.sb-ico-emoji {
+    font-size: 1.2rem;
+    min-width: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sb-ico-label {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: inherit;
+}
+
+/* Botón de toggle (hamburguesa) */
+.sb-ico--toggle {
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 14px;
+}
+
+/* Tooltips cuando está colapsado (opcional si la clase .tt existe) */
+.sidebar:not(.expanded) .sb-ico .tt {
+    display: none;
+}

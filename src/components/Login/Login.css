@@ -1,0 +1,207 @@
+/* ── Contenedor principal con fondo oscuro vibrante y degradado ── */
+.login-page-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 20% 20%, #1a103c 0%, #090d16 100%);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+/* ── Formas de luz flotantes muy coloridas ── */
+.bg-glow-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.shape-1 {
+    width: 450px;
+    height: 450px;
+    background: rgba(255, 94, 0, 0.55);
+    top: -100px;
+    left: -100px;
+}
+
+.shape-2 {
+    width: 500px;
+    height: 500px;
+    background: rgba(0, 198, 255, 0.45);
+    bottom: -120px;
+    right: -120px;
+}
+
+/* ── Contenedor de la interfaz ── */
+.login-box-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 520px;
+    padding: 20px;
+}
+
+/* ── Encabezado ── */
+.login-top-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.login-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(255, 120, 0, 0.2);
+    border: 1px solid rgba(255, 120, 0, 0.5);
+    color: #ff9e40;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.main-title {
+    font-size: 2.7rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0 0 6px 0;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.highlight-text {
+    background: linear-gradient(135deg, #ff7e33 0%, #ff1361 50%, #9030fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-subtitle {
+    font-size: 1rem;
+    color: #94a3b8;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* ── Tarjeta central (Glassmorphic) ── */
+.login-glass-card {
+    background: rgba(18, 24, 38, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 26px;
+    padding: 40px 36px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6),
+                0 0 40px rgba(144, 48, 252, 0.2) inset;
+    box-sizing: border-box;
+}
+
+/* ── Icono superior dentro de la tarjeta ── */
+.card-icon-badge {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px auto;
+    background: linear-gradient(135deg, rgba(255, 126, 51, 0.3) 0%, rgba(255, 19, 97, 0.3) 100%);
+    border: 1px solid rgba(255, 126, 51, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(255, 94, 0, 0.3);
+}
+
+.card-icon-badge span {
+    font-size: 2.3rem;
+}
+
+.card-heading {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+}
+
+/* ── Etiquetas de características ── */
+.feature-tags-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.f-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ── Botón de acción con gran brillo y color ── */
+.btn-action-glow {
+    width: 100%;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #ff5e00 0%, #ff1361 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(255, 19, 97, 0.5),
+                0 4px 12px rgba(255, 94, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-action-glow:hover {
+    background: linear-gradient(135deg, #ff7324 0%, #ff3379 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(255, 19, 97, 0.65),
+                0 6px 15px rgba(255, 94, 0, 0.5);
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-action-glow:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/* ── Pie de página ── */
+.login-bottom-footer {
+    margin-top: 24px;
+    font-size: 0.82rem;
+    color: #64748b;
+    text-align: center;
+    font-weight: 500;
+}
